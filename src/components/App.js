@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import Section from 'components/Section';
-import hot_tickets from 'dummy_data.json';
 
-export default class App extends Component {
-  state = {
-    tickets: hot_tickets
-  }
-
+class App extends Component {
   render() {
     return (
       <div>
         <Section
           headerTitle={'Hot Tickets'}
           subHeaderTitle={'Get tickets to your favourite events'}
-          items={this.state.tickets}
+          items={this.props.tickets}
         />
       </div>
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    tickets: state.tickets
+  }
+}
+
+export default connect(mapStateToProps)(App);

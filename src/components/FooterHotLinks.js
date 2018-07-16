@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
-
-import hot_tickets from 'dummy_data.json';
+import { connect } from 'react-redux';
 
 class FooterHotLinks extends Component {
-  state = {
-    tickets: hot_tickets
-  }
-
   renderHotLinks() {
-    return this.state.tickets.map(ticket => (
+    return this.props.tickets.map(ticket => (
       <li key={ticket.id}>
         <a href="">{ticket.name}</a>
       </li>
@@ -27,4 +22,10 @@ class FooterHotLinks extends Component {
   }
 }
 
-export default FooterHotLinks;
+function mapStateToProps(state) {
+  return {
+    tickets: state.tickets
+  }
+}
+
+export default connect(mapStateToProps)(FooterHotLinks);
