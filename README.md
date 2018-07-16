@@ -2,11 +2,13 @@
 
 This is a simple react migration for a home page of KyaZoonga's main site.
 
-Currently, Hot Tickets section is being converted to React.
+Currently, only following sections are being converted to React.
+- Hot Tickets
+- Footer Popular Events
 
 ## Pre-requisites
 
-- Node
+- Node.js
 
 ## Installation
 
