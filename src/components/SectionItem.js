@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import ItemImage from 'components/ItemImage';
 import ItemWhosAttending from 'components/ItemWhosAttending';
@@ -6,7 +7,7 @@ import ItemPriceRange from 'components/ItemPriceRange';
 import ItemDetails from 'components/ItemDetails';
 import ItemFooter from 'components/ItemFooter';
 
-export default class SectionItem extends Component {
+class SectionItem extends Component {
   render() {
     const {
       imageURL,
@@ -39,3 +40,9 @@ export default class SectionItem extends Component {
     );
   }
 }
+
+SectionItem.propTypes = {
+  item: PropTypes.object.isRequired
+}
+
+export default SectionItem;

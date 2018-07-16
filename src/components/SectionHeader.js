@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-export default class SectionHeader extends Component {
+class SectionHeader extends Component {
   render() {
     return (
       <h2 className="site-title">
@@ -10,3 +11,9 @@ export default class SectionHeader extends Component {
     )
   }
 }
+
+SectionHeader.propTypes = {
+  title: PropTypes.string
+}
+
+export default SectionHeader;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-export default class ItemImage extends Component {
+class ItemImage extends Component {
   render() {
     return(
       <div className="ticket-img">
@@ -10,3 +11,9 @@ export default class ItemImage extends Component {
     )
   }
 }
+
+ItemImage.propTypes = {
+  img: PropTypes.string.isRequired
+}
+
+export default ItemImage;

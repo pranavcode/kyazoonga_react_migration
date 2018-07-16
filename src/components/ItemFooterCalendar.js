@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class ItemFooterCalendar extends Component {
+class ItemFooterCalendar extends Component {
   render() {
     return (
       <div className="pull-left">
@@ -14,3 +14,5 @@ export default class ItemFooterCalendar extends Component {
     );
   }
 }
+
+export default ItemFooterCalendar;

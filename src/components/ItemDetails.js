@@ -22,7 +22,7 @@ class ItemDetails extends Component {
 ItemDetails.propTypes = {
   datetime: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  venue: PropTypes.string.isRequired,
+  venue: PropTypes.string.isRequired
 }
 
 export default ItemDetails;

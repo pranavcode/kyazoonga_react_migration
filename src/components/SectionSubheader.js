@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-export default class SectionSubheader extends Component {
+class SectionSubheader extends Component {
   render() {
     return (
       <small>
@@ -9,3 +10,9 @@ export default class SectionSubheader extends Component {
     )
   }
 }
+
+SectionSubheader.propTypes = {
+  title: PropTypes.string
+}
+
+export default SectionSubheader;

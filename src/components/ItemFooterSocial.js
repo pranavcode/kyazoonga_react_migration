@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class ItemFooterSocial extends Component {
+class ItemFooterSocial extends Component {
   render() {
     return (
       <div className="pull-right">
@@ -20,3 +20,5 @@ export default class ItemFooterSocial extends Component {
     );
   }
 }
+
+export default ItemFooterSocial;

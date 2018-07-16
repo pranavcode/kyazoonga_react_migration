@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-export default class ItemPriceRange extends Component {
+class ItemPriceRange extends Component {
   render() {
     return (
       <div className="ticket-price">
@@ -9,3 +10,9 @@ export default class ItemPriceRange extends Component {
     );
   }
 }
+
+ItemPriceRange.propTypes = {
+  range: PropTypes.string.isRequired
+}
+
+export default ItemPriceRange;

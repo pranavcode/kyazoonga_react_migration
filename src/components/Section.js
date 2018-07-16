@@ -1,22 +1,37 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import SectionHeader from 'components/SectionHeader';
 import SectionSubheader from 'components/SectionSubheader';
 import SectionContents from 'components/SectionContents';
 import SectionDiscoverMore from 'components/SectionDiscoverMore';
 
-export default class Section extends Component {
+class Section extends Component {
   render() {
+    const {
+      headerTitle,
+      subHeaderTitle,
+      items
+    } = this.props;
+
     return (
       <section className="hot-ticket-sec ticket-boxes">
         <div className="container">
-          <SectionHeader title={this.props.headerTitle}>
-            <SectionSubheader title={this.props.subHeaderTitle} />
+          <SectionHeader title={headerTitle}>
+            <SectionSubheader title={subHeaderTitle} />
           </SectionHeader>
-          <SectionContents items={this.props.items} />
+          <SectionContents items={items} />
           <SectionDiscoverMore />
         </div>
       </section>
     );
   }
 }
+
+Section.propTypes = {
+  headerTitle: PropTypes.string,
+  subHeaderTitle: PropTypes.string,
+  items: PropTypes.array
+}
+
+export default Section;

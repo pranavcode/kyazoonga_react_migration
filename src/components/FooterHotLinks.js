@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import hot_tickets from 'dummy_data.json';
 
-export default class FooterHotLinks extends Component {
+class FooterHotLinks extends Component {
   state = {
     tickets: hot_tickets
   }
@@ -26,3 +26,5 @@ export default class FooterHotLinks extends Component {
     );
   }
 }
+
+export default FooterHotLinks;
